@@ -9,6 +9,7 @@ import {
   FiUser,
   FiBriefcase,
 } from "react-icons/fi";
+import me from "../images/krish.jpeg"
 
 const Home = () => {
   const containerVariants = {
@@ -101,9 +102,7 @@ const Home = () => {
               <div className="w-80 h-80 mx-auto relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
                 <div className="relative w-full h-full bg-slate-800 rounded-2xl border border-slate-700 flex items-center justify-center">
-                  <div className="text-6xl text-slate-600">
-                    <FiCode />
-                  </div>
+                  <img src={me} className="rounded-2xl border border-slate-700"/>
                 </div>
               </div>
             </motion.div>

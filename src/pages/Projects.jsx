@@ -218,15 +218,6 @@ const Projects = () => {
       live: "",
       stats: { realtime: "true", presence: "true", duration: "1 month" }
     }
-
-
-
-
-
-
-
-
-
   ];
 
   const filters = [
@@ -285,7 +276,6 @@ const Projects = () => {
         </div>
       </motion.section>
 
-      {/* Filter Section */}
       <section className="px-6 pb-16">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -312,7 +302,6 @@ const Projects = () => {
         </div>
       </section>
 
-      {/* Projects Grid */}
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -363,7 +352,6 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {/* Project Content */}
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3 group-hover:text-cyan-400 transition-colors">
                     {project.title}
@@ -373,7 +361,6 @@ const Projects = () => {
                     {project.description}
                   </p>
 
-                  {/* Technologies */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((Tech, i) => (
                       <div
@@ -396,7 +383,6 @@ const Projects = () => {
                     ))}
                   </div>
 
-                  {/* Project Stats */}
                   <div className="grid grid-cols-3 gap-4 pt-4 border-t border-slate-700">
                     {project.stats && Object.entries(project.stats).map(([key, value], i) => (
                       <div key={i} className="text-center">
@@ -416,7 +402,6 @@ const Projects = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
       <section className="py-20 px-6 bg-slate-800/50">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -437,7 +422,7 @@ const Projects = () => {
                 Start a Project
               </button>
             </a>
-            <a href="https://github.com/username">
+            <a href="https://github.com/krish2366">
               <button className="border border-slate-600 px-8 py-4 rounded-lg font-semibold hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300 flex items-center gap-2">
                 <FiGithub /> View GitHub
               </button>

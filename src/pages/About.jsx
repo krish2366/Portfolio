@@ -29,6 +29,8 @@ import {
   SiScikitlearn,
   SiGraphql
 } from "react-icons/si";
+import me from "../images/krish.jpeg"
+import resume from "../Krish_Resume.pdf"
 
 const About = () => {
   const containerVariants = {
@@ -155,7 +157,8 @@ const About = () => {
                   <div className="relative w-full h-full bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden">
                     {/* Replace with your actual image */}
                     <div className="w-full h-full bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center">
-                      <div className="text-8xl text-slate-600">👨‍💻</div>
+                      <img src={me} className="rounded-2xl border border-slate-700"/>
+                      
                     </div>
                   </div>
                 </div>
@@ -168,10 +171,13 @@ const About = () => {
                     <FiMapPin className="text-cyan-400" />
                     <span>New Delhi, India</span>
                   </div>
-                  <button className="bg-gradient-to-r from-cyan-500 to-purple-600 px-6 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center gap-2 mx-auto">
-                    <FiDownload />
-                    Download Resume
-                  </button>
+                  <button className="bg-gradient-to-r from-cyan-500 to-purple-600 px-6 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 ">
+                    <a href={resume} download="Krish_Resume.pdf" className="flex items-center gap-2 mx-auto"  >
+                      <FiDownload />
+                      Download Resume
+                    </a>
+
+                  </button >
                 </motion.div>
               </div>
             </motion.div>

@@ -5,10 +5,10 @@ import {
   FiMapPin,
   FiLinkedin,
   FiGithub,
-  FiTwitter,
   FiSend,
   FiUser,
   FiMessageSquare,
+  FiInstagram
 } from "react-icons/fi";
 import { useState } from "react";
 
@@ -52,11 +52,10 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
       setFormData({ name: "", email: "", subject: "", message: "" });
-      // You can add success message here
+      alert("message sent :)");
     }, 2000);
   };
 
@@ -64,21 +63,21 @@ const Contact = () => {
     {
       icon: FiMail,
       title: "Email",
-      value: "hello@yourname.com",
-      link: "mailto:hello@yourname.com",
+      value: "krish236630@gmail.com",
+      link: "mailto:krish236630@gmail.com",
       description: "Send me an email anytime!",
     },
     {
       icon: FiPhone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
+      value: "+91 8595652163",
+      link: "tel:+918595652163",
       description: "Call me for urgent matters",
     },
     {
       icon: FiMapPin,
       title: "Location",
-      value: "San Francisco, CA",
+      value: "New Delhi, India",
       link: "#",
       description: "Available for local meetings",
     },
@@ -88,19 +87,19 @@ const Contact = () => {
     {
       icon: FiGithub,
       name: "GitHub",
-      url: "https://github.com/username",
+      url: "https://github.com/krish2366",
       color: "hover:text-gray-400",
     },
     {
       icon: FiLinkedin,
       name: "LinkedIn",
-      url: "https://linkedin.com/in/username",
+      url: "https://www.linkedin.com/in/krish-907187291/",
       color: "hover:text-blue-400",
     },
     {
-      icon: FiTwitter,
-      name: "Twitter",
-      url: "https://twitter.com/username",
+      icon: FiInstagram,
+      name: "Instagram",
+      url: "https://www.instagram.com/_krish2366_/",
       color: "hover:text-sky-400",
     },
     {
@@ -113,7 +112,6 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">
-      {/* Hero Section */}
       <motion.section
         variants={containerVariants}
         initial="hidden"
@@ -146,7 +144,7 @@ const Contact = () => {
           >
             <div className="flex items-center gap-2">
               <FiMail className="text-cyan-400" />
-              <span>Usually replies within 2 hours</span>
+              <span>Usually replies</span>
             </div>
             <div className="flex items-center gap-2">
               <FiMessageSquare className="text-purple-400" />
@@ -156,7 +154,6 @@ const Contact = () => {
         </div>
       </motion.section>
 
-      {/* Main Content */}
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16">
@@ -265,7 +262,6 @@ const Contact = () => {
               </form>
             </motion.div>
 
-            {/* Contact Information */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -282,7 +278,6 @@ const Contact = () => {
                 </p>
               </div>
 
-              {/* Contact Methods */}
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (
                   <motion.a
@@ -309,7 +304,6 @@ const Contact = () => {
                 ))}
               </div>
 
-              {/* Social Links */}
               <div>
                 <h3 className="text-xl font-bold mb-4">Connect on Social</h3>
                 <div className="flex gap-4">
@@ -328,7 +322,6 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Availability Status */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -350,56 +343,6 @@ const Contact = () => {
             </motion.div>
           </div>
         </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 px-6 bg-slate-800/50">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto"
-        >
-          <h2 className="text-4xl font-bold text-center mb-12">
-            Frequently Asked Questions
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                q: "What's your typical response time?",
-                a: "I usually respond to emails within 2-4 hours during business days and within 24 hours on weekends.",
-              },
-              {
-                q: "Do you work with international clients?",
-                a: "Absolutely! I work with clients from all around the world and am comfortable with different time zones.",
-              },
-              {
-                q: "What's your preferred project timeline?",
-                a: "Project timelines vary based on scope, but I typically prefer projects that span 2-12 weeks for optimal results.",
-              },
-              {
-                q: "Do you provide ongoing maintenance?",
-                a: "Yes, I offer maintenance packages and long-term support for all projects I develop.",
-              },
-            ].map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800 rounded-xl p-6 border border-slate-700"
-              >
-                <h3 className="text-lg font-semibold mb-3 text-cyan-400">
-                  {faq.q}
-                </h3>
-                <p className="text-slate-300">{faq.a}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </section>
     </div>
   );
